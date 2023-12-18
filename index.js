@@ -74,7 +74,7 @@ const schema = makeAugmentedSchema({ typeDefs, resolvers });
 // we create a Neo4j driver instance
 const driver = neo4j.driver(
   'bolt://localhost:7687',
-  neo4j.auth.basic('neo4j', '*Spider960311cc') // Replace with actual password
+  neo4j.auth.basic('neo4j', 'password') // Replace with your credentials
 );
 
 // we verify the Neo4j connectivity
