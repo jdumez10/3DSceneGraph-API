@@ -1,9 +1,5 @@
 # 3D SceneGraph-API
-This project integrates a Neo4j database with a GraphQL API via Apollo Server for advanced 3D scene analysis. It allows querying and manipulating scene data, focusing on computing and retrieving objects based on a viewer's perspective and field of view in 3D environments
-
-## Overview
-
-This project integrates a Neo4j database with a GraphQL API via Apollo Server to facilitate the querying and manipulation of 3D scene data. The primary feature is the computation and retrieval of objects within a viewer's perspective in a 3D environment, taking into account their viewpoint and field of vision. This capability is crucial for applications in urban development, environmental monitoring, and virtual navigation.
+This project integrates a Neo4j database with a GraphQL API via Apollo Server for advanced 3D scene analysis. It allows querying and manipulating scene data, focusing on computing and retrieving objects based on a viewer's perspective and field of view in 3D environments. This capability is crucial for applications in urban development, environmental monitoring, and virtual navigation.
 
 ## Neo4j Schema and Data
 
