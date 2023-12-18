@@ -1,0 +1,74 @@
+#----------------------#
+#--- GraphQL Schema ---# 
+#----------------------#
+
+# Point type representing a coordinate in 3D space with x, y, and z axes
+type Point {
+    x: Float!
+    y: Float!
+    z: Float!
+}
+
+# BoundingBox type representing the minimum and maximum points of a bounding box in 3D space
+type BoundingBox {
+    min: Point!
+    max: Point!
+}
+
+# Lamp type representing a lamp object within a scene
+type Lamp {
+    id: ID!
+    center: Point!
+    color: String!
+    bbox: BoundingBox!
+}
+
+# Chair type representing a chair object within a scene
+type Chair {
+    id: ID!
+    center: Point!
+    color: String!
+    bbox: BoundingBox!
+}
+
+# Table type representing a table object within a scene
+type Table {
+    id: ID!
+    center: Point!
+    color: String!
+    bbox: BoundingBox!
+}
+
+# Scene type representing a complete scene, composed of multiple objects
+type Scene {
+    id: ID!
+    timestamp: String!
+    rgbImages: [String!]!
+    lamps: [Lamp!]!
+    chairs: [Chair!]!
+    tables: [Table!]!
+}
+
+# Query type for fetching data.
+type Query {
+    scene(id: ID!): Scene
+    allScenes: [Scene!]!
+}
+
+# VisibleObject Query type representing objects that are visible to a viewer
+type VisibleObject {
+    id: ID!
+    center: Point!
+    translatedPosition: Point!
+    angleFromViewer: Float!
+    distanceFromViewer: Float!
+}
+
+# Extension of the Query type to include a query for visible objects based on viewer's perspective
+extend type Query {
+    visibleObjects(viewerPosition: Point!, viewerDirection: Point!, fieldOfViewAngle: Float!): [VisibleObject!]!
+}
+
+
+
+
