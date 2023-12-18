@@ -32,7 +32,7 @@ The Apollo Server acts as an intermediary between the Neo4j database and clients
 
 ## Usage 
 
-The following are the steps required for using this code
+The following are the steps required for running this project
 
 ### Prerequisites
 
