@@ -49,7 +49,6 @@ The following are the steps required for running this project
 		```
 		"type": "module",
 		```
-
 2. **Install Dependencies**:
 	- Install the necessary Node.js packages by running:
 		```
